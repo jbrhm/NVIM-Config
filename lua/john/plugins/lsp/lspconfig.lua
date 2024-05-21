@@ -27,7 +27,8 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 	
-	lspconfig["clangd"].setup({})
+	-- This is where the flags are passed to clangd --header-insertion=never disables auto import :)))
+	lspconfig["clangd"].setup({cmd = { "clangd", "--completion-style=detailed", "--header-insertion=never"}})
 
 	-- Python language server
 	lspconfig["pyright"].setup({})
