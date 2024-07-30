@@ -33,5 +33,9 @@ return {
 	-- Python language server
 	lspconfig["pyright"].setup({})
 
+  -- CMake Language Server
+  -- https://github.com/regen100/cmake-language-server
+  lspconfig["cmake"].setup({})
+
   end,
 }
