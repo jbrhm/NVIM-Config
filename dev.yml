@@ -1,0 +1,36 @@
+- name: Install NeoVIM
+  hosts: localhost
+  tasks:
+  - name: Install APT Packages
+    become: true
+    apt:
+      cache_valid_time: 604800
+      state: latest
+      name:
+        - fzf
+        - nodejs
+        - zsh
+
+  - name: Oh-My-Zsh
+    git:
+      repo: https://github.com/ohmyzsh/ohmyzsh.git
+      dest: ~/.oh-my-zsh
+      version: master
+
+  - name: Use ZSH as a default shell
+    become: true
+    command: chsh --shell /usr/bin/zsh john
+
+  - name: ZSH Automatic Suggestions Plugin
+    git:
+      repo: https://github.com/zsh-users/zsh-autosuggestions
+      dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+  - name: ZSH Syntax Highlighting Plugin
+    git:
+      repo: https://github.com/zsh-users/zsh-syntax-highlighting
+      dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+  - name: Get Dotfiles
+    uri:
+      url: 
