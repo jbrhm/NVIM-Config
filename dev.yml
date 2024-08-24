@@ -70,5 +70,6 @@
   - name: Install foo
     become: true
     community.general.snap:
+      classic: true
       name:
         - nvim
