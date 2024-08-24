@@ -59,7 +59,7 @@
   - name: Get NeoVIM dotfiles
     git:
       repo: git@github.com:jbrhm/NVIM-Config.git
-      dest: ~/.config/
+      dest: ~/.config/NVIM-Config
       version: main
   
   - name: Create nvim symlink
