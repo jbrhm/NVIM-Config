@@ -65,6 +65,7 @@
   - name: Get NeoVIM dotfiles
     git:
       repo: git@github.com:jbrhm/NVIM-Config.git
+      accept_hostkey: true
       dest: ~/.config/NVIM-Config
       version: main
   
@@ -73,6 +74,7 @@
       src: ~/.config/NVIM-Config
       dest: ~/.config/nvim
       state: link
+
   - name: Install foo
     become: true
     community.general.snap:
