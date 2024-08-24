@@ -37,6 +37,12 @@
       url: https://raw.githubusercontent.com/jbrhm/NVIM-Config/main/.zshrc
       dest: ~/./
 
+  - name: Create fonts directory
+    file:
+      path: ~/.local/share/fonts/
+      state: directory
+      mode: '0755'
+
   - name: Get JetBrainsMono
     uri:
       url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
