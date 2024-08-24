@@ -10,6 +10,7 @@
         - fzf
         - nodejs
         - zsh
+        - build-essential
 
   - name: Oh-My-Zsh
     git:
@@ -33,4 +34,5 @@
 
   - name: Get Dotfiles
     uri:
-      url: 
+      url: https://raw.githubusercontent.com/jbrhm/NVIM-Config/main/.zshrc
+      dest: ~/./
