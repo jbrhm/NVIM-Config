@@ -55,3 +55,19 @@
   - name: Update Font Cache
     shell:
       cmd: fc-cache -fv
+
+  - name: Get NeoVIM dotfiles
+    git:
+      repo: git@github.com:jbrhm/NVIM-Config.git
+      dest: ~/.config/
+      version: main
+  
+  - name: Create nvim symlink
+    file:
+      src: ~/.config/NVIM-Config
+      dest: ~/.config/nvim
+      state: link
+  - name: Install foo
+    community.general.snap:
+      name:
+        - nvim
