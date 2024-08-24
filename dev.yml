@@ -11,6 +11,7 @@
         - nodejs
         - zsh
         - build-essential
+        - npm
 
   - name: Oh-My-Zsh
     git:
