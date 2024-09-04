@@ -76,7 +76,7 @@
       dest: ~/.config/nvim
       state: link
 
-  - name: Install foo
+  - name: Install NeoVIM
     become: true
     community.general.snap:
       classic: true
