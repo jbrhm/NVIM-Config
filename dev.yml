@@ -12,6 +12,7 @@
         - zsh
         - build-essential
         - npm
+        - latexmk
 
   - name: Oh-My-Zsh
     git:
