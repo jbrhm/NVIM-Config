@@ -37,5 +37,7 @@ return {
     -- https://github.com/regen100/cmake-language-server
     lspconfig["cmake"].setup({})
 
+	-- Rust Language Server
+    lspconfig["rust_analyzer"].setup({})
   end,
 }
